@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0 0.0 0.0 0.1 0.1 0.1" captureAppVersion="6.5.0" lastSaved="2018-11-23 20:08:38" name="iphone" targetId="d7686f1931934d248216aa0baf78aa98" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 0.1 0.1 0.1" captureAppVersion="6.5.0" lastSaved="2018-11-23 19:31:09" name="bakugan" targetId="32b5d956728945e58873139abb054de1" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 0.1 0.1 0.1" captureAppVersion="6.5.0" lastSaved="2018-11-23 19:04:34" name="wonki" targetId="26d6229d71ac472ea597295d2f676b1b" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 0.1 0.1 0.1" captureAppVersion="6.5.0" lastSaved="2018-11-22 02:59:01" name="kinder" targetId="d313abaafeb641fe845270de05acdeeb" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 0.1 0.1 0.1" captureAppVersion="6.5.0" lastSaved="2018-11-22 03:11:43" name="pen" targetId="24714748334f46e685a01a5910a61a04" version="2.0" />
+  </TargetSet>
+</QCARInfo>
