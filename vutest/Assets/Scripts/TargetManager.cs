@@ -10,11 +10,13 @@ public class TargetManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        //targetEvents[(int)TargetNames.forestBase].TargetDetected += ForestBaseDetected;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         for (int i = 0; i < targetEvents.Length; i++)
         {
             if(targetEvents[i].isDetected)
@@ -34,6 +36,9 @@ public class TargetManager : MonoBehaviour {
                 Instantiate(testCube, targetEvents[(int)TargetNames.forestBase].targetTransform);
             }
         }
+        */
 
     }
+
+    //void ForestBaseDetected() { print("yeah"); }
 }

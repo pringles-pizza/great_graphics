@@ -8,11 +8,16 @@ public class TargetEvent : MonoBehaviour,ITrackableEventHandler  {
     private TrackableBehaviour mTrackableBehaviour;
 
     public bool isDetected = false;
-    public Transform targetTransform;
+    public Transform targetTransform; //오브젝트가 올라갈 곳
+    public GameObject modelObject; //오브젝트
 
     void Start()
     {
-        targetTransform = transform;
+        if (targetTransform == null)
+        {
+            targetTransform = transform;
+        }
+        modelObject.transform.parent = targetTransform;
 
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
@@ -29,13 +34,26 @@ public class TargetEvent : MonoBehaviour,ITrackableEventHandler  {
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-            isDetected = true;
-            print("Detected");
+            Detected();
         }
         else
         {
             isDetected = false;
-            print("UnDetected");
+            Lost();
         }
     }
+
+    void Detected()
+    {
+        print("Detected");
+        modelObject.GetComponent<Renderer>().enabled = true;
+
+
+    }
+    void Lost()
+    {
+        print("UnDetected");
+
+    }
+
 }

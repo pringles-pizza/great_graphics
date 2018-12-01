@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ModelControl.cs" />
     <Compile Include="Assets\Scripts\TargetEvent.cs" />
     <Compile Include="Assets\Scripts\TargetManager.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
@@ -71,8 +72,8 @@
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\first.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
-    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />

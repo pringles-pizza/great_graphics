@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Mountain" size="4.000000 3.781818" />
+    <ImageTarget name="Lake" size="4.000000 4.136752" />
+    <ImageTarget name="ForestBase" size="8.000000 8.016227" />
     <ImageTarget name="5" size="5.000000 5.000000" />
     <ImageTarget name="4" size="5.000000 3.333333" />
     <ImageTarget name="3" size="5.000000 5.000000" />
