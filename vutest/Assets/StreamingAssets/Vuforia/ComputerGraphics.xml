@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="LushWoods" size="3.500000 3.267772" />
+    <ImageTarget name="LushQuestionMark" size="3.500000 3.873595" />
+    <ImageTarget name="LushMountain" size="3.500000 3.119910" />
+    <ImageTarget name="LushLake" size="3.500000 3.413366" />
+    <ImageTarget name="LushForestBase" size="7.000000 6.992239" />
     <ImageTarget name="Mountain" size="4.000000 3.781818" />
     <ImageTarget name="Lake" size="4.000000 4.136752" />
     <ImageTarget name="ForestBase" size="8.000000 8.016227" />
