@@ -14,15 +14,34 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
     [Header("베이스 마커")]
     public GameObject BaseMarker; // 베이스 마커
     
+    /*
     [Header("모델 오브젝트 인스턴스 (내 자식 오브젝트)")]
     public GameObject modelObject; //오브젝트 인스턴스 (끄고 켜짐)
+    */
+
     [Header("내가 생성할 모델 오브젝트")]
     public GameObject modelObjectCreated; //생성될 오브젝트
     [Header("생성된 오브젝트가 올라갈 곳")]
     public Transform targetTransform; //오브젝트가 올라갈 곳
 
+    public GameObject[] originalChildren;
+
     GameObject modelInstCreated; //생성된 오브젝트 인스턴스
 
+    void Awake()
+    {
+        //원래 자식들 저장
+        ModelControl[] mcs = GetComponentsInChildren<ModelControl>();
+
+        originalChildren = new GameObject[mcs.Length];
+
+        for (int i = 0; i < mcs.Length; i++)
+        {
+            originalChildren[i] = mcs[i].gameObject;
+        }
+        
+
+    }
 
     void Start()
     {
@@ -47,6 +66,8 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
         {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
+
+        CallUnDetection();
     }
 
     void Update()
@@ -98,7 +119,7 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
 
     void Detected()
     {
-        //print("Detected");
+        print(gameObject + "Detected (marker)");
 
         if (BaseMarker != null)
         {
@@ -111,7 +132,7 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
 
     void Lost()
     {
-        //print("UnDetected");
+        print(gameObject + "UnDetected (marker)");
 
         if (BaseMarker != null)
         {
@@ -133,9 +154,9 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
             modelInstControl.ModelDetected();
         }*/
 
-        foreach (ModelControl modelControl in GetComponentsInChildren<ModelControl>())
+        foreach (GameObject originalChild in originalChildren)
         {
-            modelControl.ModelDetected();
+            originalChild.GetComponent<ModelControl>().ModelDetected();
         }
 
         //모델 생성, 모델의 감지 코드 호출
@@ -157,9 +178,9 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
             ModelControl modelInstControl = modelObject.GetComponent<ModelControl>();
             modelInstControl.ModelLost();
         }*/
-        foreach (ModelControl modelControl in GetComponentsInChildren<ModelControl>())
+        foreach (GameObject originalChild in originalChildren)
         {
-            modelControl.ModelLost();
+            originalChild.GetComponent<ModelControl>().ModelLost();
         }
 
         //모델(생성된) 사라짐 코드 호출

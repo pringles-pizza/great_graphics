@@ -7,6 +7,9 @@ public class ModelControl : MonoBehaviour {
     private Animator animator;
     private Animation animation;
 
+    [Header("수정X")]
+    public TargetEvent target;
+
     [Header("오브젝트가 붙을 트랜스폼")]
     public Transform targetTransform; //오브젝트가 올라갈 곳
 
@@ -19,6 +22,8 @@ public class ModelControl : MonoBehaviour {
     [Header("삭제되거나 렌더러가 꺼지기까지의 시간")]
     public float deletionTimer;
 
+    [Header("생성될 때 재생하기")]
+    public bool playOnCreate = false;
 
 
     void Start() {
@@ -39,6 +44,10 @@ public class ModelControl : MonoBehaviour {
             animation = GetComponent<Animation>();
         }
 
+        if (playOnCreate)
+        {
+            CreateAction();
+        }
     }
 
     void Update() {
@@ -53,22 +62,25 @@ public class ModelControl : MonoBehaviour {
 
     public void ModelDetected()
     {
-        //자신과 모든 자식의 ModelControl의 생성 스크립트 실행
-        //CreateAction();
+        //자신의 ModelControl의 생성 스크립트 실행
+        CreateAction();
+        /*
         foreach (ModelControl childControl in transform.GetComponentsInChildren<ModelControl>())
         {
             childControl.CreateAction();
-        }
+        }*/
     }
 
     public void ModelLost()
     {
-        //자신과 모든 자식의 ModelControl의 삭제 스크립트 실행
-        //DeleteAction();
+        //자신의 ModelControl의 삭제 스크립트 실행
+        DeleteAction();
+        /*
         foreach (ModelControl childControl in transform.GetComponentsInChildren<ModelControl>())
         {
             childControl.DeleteAction();
         }
+        */
     }
 
     public void CreateAction() //감지될 때 실행되는 모든 자식 모델의 코드
@@ -122,21 +134,32 @@ public class ModelControl : MonoBehaviour {
 
     private void Hide()
     {
+        if (GetComponent<Renderer>() != null)
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
+        /*
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         foreach (var component in rendererComponents)
         {
             component.enabled = false;
             print("hide____________");
-        }
+        }*/
     }
 
     private void Show()
     {
+        if (GetComponent<Renderer>() != null)
+        {
+            GetComponent<Renderer>().enabled = true;
+        }
+        /*
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         foreach (var component in rendererComponents)
         {
             component.enabled = true;
         }
+        */
     }
 
 }

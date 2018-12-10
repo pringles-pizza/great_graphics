@@ -61,17 +61,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Boid\Scripts\BoidController.cs" />
+    <Compile Include="Assets\Boid\Scripts\BoidFlocking.cs" />
+    <Compile Include="Assets\Boid\Scripts\ModelOrientation.cs" />
     <Compile Include="Assets\Scripts\ModelControl.cs" />
+    <Compile Include="Assets\Scripts\RandomTimerCreate.cs" />
     <Compile Include="Assets\Scripts\TargetEvent.cs" />
     <Compile Include="Assets\Scripts\TargetManager.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\first_OT.xml" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\first.xml" />
-    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
