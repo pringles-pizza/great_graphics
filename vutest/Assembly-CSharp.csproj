@@ -82,6 +82,7 @@
     <None Include="Assets\LowpolyModels\AdvancedCelShaders\Shaders\TerrainCel.shader" />
     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\first.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
@@ -90,7 +91,6 @@
     <None Include="Assets\LowpolyModels\AdvancedCelShaders\Shaders\Foliage.shader" />
     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
-    <None Include="Assets\StreamingAssets\Vuforia\ComputerGraphics.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
     <Reference Include="UnityEditor.StandardEvents">

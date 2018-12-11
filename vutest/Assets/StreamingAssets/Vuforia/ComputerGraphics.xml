@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Mountain" size="3.500000 4.541077" />
+    <ImageTarget name="House" size="3.500000 4.727536" />
+    <ImageTarget name="Lake" size="3.500000 4.588235" />
+    <ImageTarget name="Tree" size="3.500000 4.421052" />
     <ImageTarget name="Birb" size="3.500000 2.703750" />
-    <ImageTarget name="Mountain" size="3.500000 4.480000" />
-    <ImageTarget name="House" size="3.500000 4.955752" />
-    <ImageTarget name="Lake" size="3.500000 4.611250" />
-    <ImageTarget name="Tree" size="3.500000 4.335958" />
     <ImageTarget name="Question" size="3.500000 3.827715" />
     <ImageTarget name="Play" size="3.500000 3.373355" />
     <ImageTarget name="Cube" size="3.500000 3.400000" />
