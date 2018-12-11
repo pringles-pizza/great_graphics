@@ -50,16 +50,6 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
         {
             targetTransform = transform;
         }
-        /*
-        if (modelObject != null)
-        {
-            modelObject.transform.parent = targetTransform;
-        }*/
-        /*
-        foreach (ModelControl modelControl in GetComponentsInChildren<ModelControl>())
-        {
-            modelControl.gameObject.transform.parent = targetTransform;
-        }*/
         //뷰포리아 초기화
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)

@@ -18,7 +18,7 @@ public class ModelControl : MonoBehaviour {
     [Header("마커 사라질 때 삭제되는가")]
     public bool DeleteOnLost;
     [Header("마커 사라질 때 렌더러가 꺼지는가")]
-    public bool HideOnLost;
+    public bool HideOnLost = true;
     [Header("삭제되거나 렌더러가 꺼지기까지의 시간")]
     public float deletionTimer;
 

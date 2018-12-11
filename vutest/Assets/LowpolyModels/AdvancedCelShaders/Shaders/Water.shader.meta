@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f60a63893a5409a41b46a0422959688c
+timeCreated: 1519925136
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _LightRamp: {fileID: 2800000, guid: 7ea4fa8f6637d234cabf1448f60f5b81, type: 3}
+  - _Foam: {fileID: 2800000, guid: 4b328c7b4ac6c9b458659368c1b4330b, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
