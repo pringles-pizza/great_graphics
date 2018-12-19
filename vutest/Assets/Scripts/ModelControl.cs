@@ -96,12 +96,17 @@ public class ModelControl : MonoBehaviour {
         // 애니메이션 실행
         if (animator != null)
         {
-            animator.SetBool("isCreating", true);
-            animator.SetBool("isDeleting", false);
+            animator.SetBool("on", true);
+            animator.SetBool("off", false);
         }
         if (animation != null)
         {
             
+        }
+        //스케일 애니메이션 실행
+        if (GetComponent<ScaleAnim>() != null)
+        {
+            GetComponent<ScaleAnim>().Appear();
         }
 
         // 렌더러 숨김 실행 중지
@@ -117,9 +122,15 @@ public class ModelControl : MonoBehaviour {
         // 애니메이션 실행
         if (animator != null)
         {
-            animator.SetBool("isCreating", false);
-            animator.SetBool("isDeleting", true);
+            animator.SetBool("on", false);
+            animator.SetBool("off", true);
         }
+        //스케일 애니메이션 실행
+        if (GetComponent<ScaleAnim>() != null)
+        {
+            GetComponent<ScaleAnim>().Disappear();
+        }
+
 
         // 삭제해야 할 경우 삭제
         if (DeleteOnLost)

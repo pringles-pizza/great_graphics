@@ -106,7 +106,7 @@ public class BoidFlocking : MonoBehaviour
 
         Collider[] colls =
             Physics.OverlapSphere(
-            transform.position,
+            transform.localPosition,
             radius);
 
         for (int i = 0; i < colls.Length; i++)
@@ -119,7 +119,7 @@ public class BoidFlocking : MonoBehaviour
             {
                 // 충돌체와의 거리 계산해서 작으면 그것으로 갱신
 
-                Vector3 collPointCurrent = (colls[i].ClosestPoint(transform.position) - transform.position);
+                Vector3 collPointCurrent = (colls[i].ClosestPoint(transform.localPosition) - transform.localPosition);
                 if (collPointCurrent.sqrMagnitude < sqrDist)
                 {
                     sqrDist = collPointCurrent.sqrMagnitude;

@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114026305149876978}
   - component: {fileID: 54420141086620944}
   - component: {fileID: 135796248089311048}
+  - component: {fileID: 114043996333460392}
+  - component: {fileID: 114494208334499774}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -214,8 +216,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553011777685518}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.00005488532, y: 0.024271173, z: 0.23}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: 0, y: 0.024271173, z: 0.098}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4032211519490712}
   m_Father: {fileID: 4553207423895156}
@@ -292,6 +294,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e1a13116db741ce8571cdd1140682e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114043996333460392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304730481886474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78745652df919842b9f97aa1b1f982c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTransform: {fileID: 0}
+  createdObject: {fileID: 0}
+  DeleteOnLost: 0
+  HideOnLost: 1
+  deletionTimer: 0.5
+  playOnCreate: 0
 --- !u!114 &114468978775201490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,17 +323,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b49c08549633c4897aee5a8a5fe8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114494208334499774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304730481886474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d562f5c0a05514b8f0c0ad0497f021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearTime: 0.5
+  disappearTime: 0.5
+  scaleMul: 1
 --- !u!135 &135796248089311048
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304730481886474}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c888d959f377a344286f1c586d3b4144, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137340754528464784
 SkinnedMeshRenderer:

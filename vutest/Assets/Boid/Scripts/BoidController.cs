@@ -43,6 +43,8 @@ public class BoidController : MonoBehaviour
 			boids[i] = boid;
 
             print(boid + " created");
+
+            GameObject.Find("TGBird").GetComponent<TargetEvent>().originalChildren.Add(boid);
 		}
 	}
 

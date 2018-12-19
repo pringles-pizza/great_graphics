@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="card3" size="7.000000 10.943590" />
+    <ImageTarget name="starbuckscard" size="7.000000 9.176428" />
+    <ImageTarget name="onecard" size="7.000000 11.149907" />
+    <ImageTarget name="House" size="5.000000 6.666667" />
+    <ImageTarget name="money" size="10.000000 5.080214" />
+    <ImageTarget name="fish" size="5.000000 5.000000" />
+  </Tracking>
+</QCARConfig>

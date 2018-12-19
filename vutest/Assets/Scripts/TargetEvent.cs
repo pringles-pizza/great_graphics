@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
+using System.Linq;
 
 public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
 
@@ -24,7 +25,7 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
     [Header("생성된 오브젝트가 올라갈 곳")]
     public Transform targetTransform; //오브젝트가 올라갈 곳
 
-    public GameObject[] originalChildren;
+    public List<GameObject> originalChildren;
 
     GameObject modelInstCreated; //생성된 오브젝트 인스턴스
 
@@ -33,7 +34,7 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
         //원래 자식들 저장
         ModelControl[] mcs = GetComponentsInChildren<ModelControl>();
 
-        originalChildren = new GameObject[mcs.Length];
+        originalChildren = new GameObject[mcs.Length].ToList();
 
         for (int i = 0; i < mcs.Length; i++)
         {
@@ -156,6 +157,8 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
             ModelControl modelInstCreatedControl = modelInstCreated.GetComponent<ModelControl>();
             modelInstCreatedControl.ModelDetected();
         }
+        //섬 디텍션
+        IslandDetection();
     }
 
     void CallUnDetection()
@@ -180,6 +183,30 @@ public class TargetEvent : MonoBehaviour, ITrackableEventHandler {
             ModelControl modelInstCreatedControl = modelInstCreated.GetComponent<ModelControl>();
             modelInstCreatedControl.ModelLost();
         }
+        //섬 언디텍션
+        IslandUndetection();
     }
 
+    void IslandDetection()
+    {
+        if (gameObject.name == "TGHouse")
+        {
+            GameObject.FindWithTag("Island").GetComponent<Animator>().SetBool("farm", true);
+        }
+        if (gameObject.name == "TGLake")
+        {
+            GameObject.FindWithTag("Island").GetComponent<Animator>().SetBool("pond", true);
+        }
+    }
+    void IslandUndetection()
+    {
+        if (gameObject.name == "TGHouse")
+        {
+            GameObject.FindWithTag("Island").GetComponent<Animator>().SetBool("farm", false);
+        }
+        if (gameObject.name == "TGLake")
+        {
+            GameObject.FindWithTag("Island").GetComponent<Animator>().SetBool("pond", false);
+        }
+    }
 }

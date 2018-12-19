@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Boid\Scripts\BoidController.cs" />
     <Compile Include="Assets\Boid\Scripts\BoidFlocking.cs" />
+    <Compile Include="Assets\Boid\Scripts\FixOrientation.cs" />
     <Compile Include="Assets\Boid\Scripts\ModelOrientation.cs" />
+    <Compile Include="Assets\Boid\Scripts\Teleport.cs" />
     <Compile Include="Assets\LowpolyModels\AdvancedCelShaders\Scripts\CameraController.cs" />
     <Compile Include="Assets\LowpolyModels\AdvancedCelShaders\Scripts\DebugHUD.cs" />
     <Compile Include="Assets\LowpolyModels\AdvancedCelShaders\Scripts\EnableCameraDepthInForward.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Assets\LowpolyModels\Script\animation.cs" />
     <Compile Include="Assets\Scripts\ModelControl.cs" />
     <Compile Include="Assets\Scripts\RandomTimerCreate.cs" />
+    <Compile Include="Assets\Scripts\ScaleAnim.cs" />
     <Compile Include="Assets\Scripts\TargetEvent.cs" />
     <Compile Include="Assets\Scripts\TargetManager.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
